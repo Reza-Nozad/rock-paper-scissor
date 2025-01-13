@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link href="/src/style.css" rel="stylesheet" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <header
+      class="flex justify-between items-center bg-gray-800 text-white p-4 rounded-md shadow-md"
+    >
+      <h1 class="text-2xl font-metalmania">Rock Paper Scissors</h1>
+      <div class="flex items-center space-x-2">
+        <span class="text-lg font-bold">Score:</span>
+        <span id="score" class="text-2xl font-metalmania text-yellow-400"
+          >0</span
+        >
+      </div>
+    </header>
+
+    <main class="flex justify-center items-center mt-8 space-x-4">
+      <button
+        data-choice="paper"
+        class="w-24 h-24 border-4 border-blue-500 rounded-full hover:scale-110 transition-transform"
+      >
+        <img src="./images/paper.svg" alt="Paper" class="w-full h-full" />
+      </button>
+      <button
+        data-choice="scissors"
+        class="w-24 h-24 border-4 border-red-500 rounded-full hover:scale-110 transition-transform"
+      >
+        <img src="./images/scissors.svg" alt="Scissors" class="w-full h-full" />
+      </button>
+      <button
+        data-choice="rock"
+        class="w-24 h-24 border-4 border-green-500 rounded-full hover:scale-110 transition-transform"
+      >
+        <img src="./images/rock.svg" alt="Rock" class="w-full h-full" />
+      </button>
+    </main>
+
+    <div
+      id="startscreen"
+      class="fixed inset-0 flex flex-col justify-center items-center bg-black text-white text-center"
+    >
+      <h1 class="text-6xl font-metalmania">Rock</h1>
+      <h2 class="text-5xl font-metalmania">Paper</h2>
+      <h3 class="text-4xl font-metalmania">Scissors</h3>
+      <button
+        id="startbutton"
+        class="mt-6 px-6 py-3 bg-yellow-500 text-black font-bold rounded-md shadow-lg hover:bg-yellow-600 transition-colors"
+      >
+        Start Game
+      </button>
+    </div>
+    <div
+      id="rules"
+      class="hidden fixed inset-0 flex flex-col items-center justify-center bg-white text-black p-8 rounded-md shadow-lg"
+    >
+      <h2 class="text-3xl font-bold mb-4">Rules</h2>
+      <p class="text-lg">Rock Paper Scissors is a game...</p>
+      <img
+        src="./images/close.svg"
+        alt="Close"
+        id="closebutton"
+        class="absolute top-4 right-4 cursor-pointer"
+      />
+    </div>
+    <div
+      id="results"
+      class="hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-900 text-white p-6 rounded-md shadow-lg"
+    >
+      <h3 id="result" class="text-4xl font-metalmania mb-6">You win!</h3>
+      <div class="flex space-x-8">
+        <div class="text-center">
+          <p>You chose:</p>
+          <div id="userchoice" class="w-16 h-16"></div>
+        </div>
+        <div class="text-center">
+          <p>Computer chose:</p>
+          <div id="computerchoice" class="w-16 h-16"></div>
+        </div>
+      </div>
+      <button
+        id="playagain"
+        class="mt-6 px-6 py-3 bg-yellow-500 text-black font-bold rounded-md shadow-lg hover:bg-yellow-600 transition-colors"
+      >
+        Play Again
+      </button>
+    </div>
+  </body>
+</html>
