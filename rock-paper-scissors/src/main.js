@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Funktion zum Schließen der Regeln
   closeRulesButton.addEventListener('click', () => {
-    rulesScreen.style.display = 'none';
+    rulesScreen.style.display = 'none'; // Schließe die Regeln, indem das Regelfenster ausgeblendet wird
   });
 
   // Funktion zur Wahl des Computers
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const winner = determineWinner(playerChoice, computerChoice);
 
     // Zeige die Ergebnisse auf dem Bildschirm an
-    userChoiceDisplay.innerHTML = `<img src="/images/${playerChoice}.svg" alt="${playerChoice}" class="w-full h-full" />`;
-    computerChoiceDisplay.innerHTML = `<img src="/images/${computerChoice}.svg" alt="${computerChoice}" class="w-full h-full" />`;
+    userChoiceDisplay.innerHTML = `<img src="./images/${playerChoice}.svg" alt="${playerChoice}" class="w-full h-full" />`;
+    computerChoiceDisplay.innerHTML = `<img src="./images/${computerChoice}.svg" alt="${computerChoice}" class="w-full h-full" />`;
 
     resultDisplay.textContent = winner;
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Eventlistener für die Buttons, die den Spielzug des Spielers aufnehmen
   buttons.forEach(button => {
     button.addEventListener('click', (event) => {
-      const playerChoice = event.target.getAttribute('data-choice');
+      const playerChoice = event.currentTarget.getAttribute('data-choice');
       playGame(playerChoice);
     });
   });
