@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link href="/src/style.css" rel="stylesheet" />
-    <script type="module" src="/src/main.js"></script>
+    <link href="./src/style.css" rel="stylesheet" />
+    <script type="module" src="./src/main.js"></script>
   </head>
+
   <body>
     <header
       class="flex justify-between items-center bg-gray-800 text-white p-4 rounded-md shadow-md"
@@ -24,7 +25,7 @@
     <main class="flex justify-center items-center mt-8 space-x-4">
       <button
         data-choice="paper"
-        class="w-24 h-24 border-4 border-blue-500 rounded-full hover:scale-110 transition-transform"
+        class="w-24 h-24 border-4 border-blue-500 rounded-full hover:scale-110 transition-transform size-16"
       >
         <img src="./images/paper.svg" alt="Paper" class="w-full h-full" />
       </button>
@@ -45,6 +46,7 @@
     <div
       id="startscreen"
       class="fixed inset-0 flex flex-col justify-center items-center bg-black text-white text-center"
+      style="background: url('./images/image (1).png') no-repeat center center; background-size: cover;"
     >
       <h1 class="text-6xl font-metalmania">Rock</h1>
       <h2 class="text-5xl font-metalmania">Paper</h2>
