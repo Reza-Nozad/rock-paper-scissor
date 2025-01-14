@@ -24,9 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Funktion zum Schließen der Regeln
-  closeRulesButton.addEventListener('click', () => {
-    rulesScreen.style.display = 'none'; // Schließe die Regeln, indem das Regelfenster ausgeblendet wird
-  });
+  if (closeRulesButton) {
+    closeRulesButton.addEventListener('click', () => {
+      rulesScreen.classList.add('hidden'); // Regeln wieder ausblenden
+    });
+  }
 
   // Funktion zur Wahl des Computers
   function getComputerChoice() {
@@ -92,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const showRulesButton = document.getElementById('showRules');
   if (showRulesButton) {
     showRulesButton.addEventListener('click', () => {
-      rulesScreen.style.display = 'flex'; // Zeige Regeln an
+      rulesScreen.classList.remove('hidden'); // Regeln sichtbar machen
     });
   }
 });
